@@ -8,11 +8,7 @@ conda create --name <env> --file requirements.txt
 conda activate <env> 
 
 # Running the UI
-execute
-
-RunHelper
-
-or run via the command below
+Execute the RunHelper script from the root or run via the command below
 
 python QNumberHelperUI.py
 
