@@ -504,8 +504,16 @@ class QNumberHelperApp(QWidget):
         return
 
     def div_btn_clicked(self):
+        FLT_EPS = 2.220446049250313e-16
         print_text = f"Dividing the numbers."
         self.update_comm_window(print_text)
+
+        temp_f_num_op = abs(self.f_nums[0] / (self.f_nums[1]+FLT_EPS))
+        if temp_f_num_op > self.max_num_out:
+            print_text = f"WARNING: Overflow due to {self.NBs[2]} bits in output."
+            self.update_comm_window(print_text)
+            if self.adjust_BDepth is True:
+                self.adjust_spin_box_NIB(num=temp_f_num_op)
 
         self.q_nums[2] = qDiv(self.q_nums[0], self.q_nums[1], self.q_nums[2], sat=self.sat_flag)
         self.f_nums[2] = self.q_nums[2].q2Float()
