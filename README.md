@@ -25,4 +25,6 @@ Negative numbers can be represented in various ways, sign_magnitude, 1's compeme
 Note that some of the operations defined for the negative numbers, such as bit shift, division etc. are highly implementation dependent. Therefore, it would be beneficial to look into their implementation before using.
 
 ## User Interface
-Enjoy!
+Enjoy the UI!
+
+![alt text](UI.png)
