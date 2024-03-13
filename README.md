@@ -1,7 +1,7 @@
 # QNumberHelper
 A handy helper for operations with Q-format numbers.
 
-# Installation
+# Setup the Environment
 Create the environment and make sure that you installed the packages as given in the requirements.txt
 
 conda create --name my_env --file requirements.txt
