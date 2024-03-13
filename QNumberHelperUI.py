@@ -5,7 +5,8 @@ from PyQt5.QtGui import QFont
 from PyQt5.QtCore import Qt
 from functools import partial
 
-from QNumber.QNumber import *
+#from QNumber.QNumber import *
+from QNumber import *
 
 class QNumberHelperApp(QWidget):
     def __init__(self):

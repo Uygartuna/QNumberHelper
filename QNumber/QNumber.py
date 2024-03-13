@@ -319,29 +319,3 @@ def qXor(q_num_in_1: QNum, q_num_in_2: QNum, q_num_out: QNum) -> QNum:
 
     q_num_out = QNum(qdata=new_qdata, num_int_bits=num_int_bits, num_frac_bits=num_frac_bits, bit_depth=bit_depth, bin_format=bin_format)
     return q_num_out
-
-# Tests 
-def QArithmeticsTests():
-    #f_num = 0.0009765625
-    f_num = -0.5
-    bit_depth = 16
-    num_frac_bits = 10
-    num_int_bits = 5
-    bin_format = 2 
-    q_num = float2Q(f_num, num_int_bits=num_int_bits, num_frac_bits=num_frac_bits, bit_depth=bit_depth, sat=True, bin_format=bin_format)
-    print(q_num.qdata)
-
-    f_num_inv = q_num.q2Float()
-    print(f_num_inv)
-    q_out = q_num.copy()
-    q_out = qSum(q_num, q_num, q_out, sat=True)
-    q_out = qSum(q_num, q_num, q_out, sat=False)
-    q_out = qSub(q_num, q_num, q_out, sat=True)
-    q_out = qSub(q_num, q_num, q_out, sat=False)
-    q_out = qMul(q_num, q_num, q_out, sat=True)
-    q_out = qMul(q_num, q_num, q_out, sat=False)
-    q_out = qDiv(q_num, q_num, q_out)
-
-    return True
-
-#QArithmeticsTests()
