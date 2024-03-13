@@ -4,12 +4,17 @@ A handy helper for operations with Q-format numbers.
 # Installation
 Create the environment and make sure that you installed the packages as given in the requirements.txt
 
-conda create --name <env> --file requirements.txt
-conda activate <env>
+conda create --name my_env --file requirements.txt
+
+conda activate my_env 
+
 OR 
-conda create --name <env>
-conda activate <env>
-pip install -r requirements.txt
+
+conda create --name my_env
+
+conda activate my_env
+
+pip install -r requirements.txt 
 
 # Running the UI
 Execute the RunHelper script from the root or run via the command below
